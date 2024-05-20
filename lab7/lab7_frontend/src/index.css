@@ -1,0 +1,102 @@
+:root {
+  --background-light: #ffffff;
+  --background-dark: #1c1c1c;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-radius: 5px;
+  --padding: 10px;
+}
+
+[data-theme='light'] {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+  --card-background: #f8f9fa;
+}
+
+[data-theme='dark'] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --card-background: #2a2a2a;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--padding);
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+input[type="text"] {
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin: 5px 0;
+  width: calc(100% - 22px);
+}
+
+.filter-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--secondary-color);
+}
+
+.movie-item {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin: var(--padding) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-item h3 {
+  margin: 0;
+}
+
+.movie-item button {
+  margin-left: 10px;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-inline input {
+  flex: 1;
+  margin-right: 10px;
+}
